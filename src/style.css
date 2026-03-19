@@ -1,0 +1,27 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.box {
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    font-size: 50px;
+}
+
+.bigger-font {
+    font-size: 70px;
+}
+button {
+    border: none;
+    background-color: transparent;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+}
