@@ -42,8 +42,8 @@ function checkForWinner() {
 let gettingAllTheBoxes = document.querySelector(".content");
 
 gettingAllTheBoxes.addEventListener("click", (e) => {
-    let elemnt = e.target;
-    let el = document.getElementById(elemnt.id);
+    const el = e.target.closest("button")?.querySelector(".box");
+    if (!el) return;
 
     if (el.innerHTML === "") {
         el.innerHTML = `<img src = ${currentPlayer} />`;

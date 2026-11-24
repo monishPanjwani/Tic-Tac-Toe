@@ -1,27 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 24px 16px;
+    color-scheme: dark;
+    background: #171a1c;
+    color: #f1f2ef;
+    font-family: Inter, system-ui, sans-serif;
+}
+
+main {
+    width: min(100%, 21rem);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.25rem;
+    letter-spacing: -0.04em;
+}
+
+.status-text {
+    margin: 8px 0 20px;
+    color: #bac3c3;
+}
+
+.content,
+.row,
+.player-inputs {
+    display: grid;
+    gap: 8px;
+}
+
+.row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+button,
+input {
+    font: inherit;
+    border-radius: 6px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.row button {
+    padding: 0;
+    border: 0;
+    background: transparent;
 }
 
 .box {
-    border: 2px solid black;
-    width: 100px;
-    height: 100px;
-    box-sizing: border-box;
-    font-size: 50px;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
+    border: 1px solid #485154;
+    border-radius: inherit;
+    background: #272d30;
 }
 
-.bigger-font {
-    font-size: 70px;
+.row button:hover .box {
+    background: #30383b;
 }
-button {
-    border: none;
-    background-color: transparent;
+
+.box img {
+    width: 66%;
+    height: 66%;
+    object-fit: contain;
+    pointer-events: none;
 }
-.content {
-    display: flex;
-    flex-direction: column;
+
+.player-inputs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: 16px 0 12px;
 }
-.row {
-    display: flex;
+
+input {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #485154;
+    background: #202528;
+    color: inherit;
+    text-align: center;
+}
+
+input::placeholder {
+    color: #b0b9b9;
+}
+
+#reset-btn {
+    padding: 10px 20px;
+    border: 0;
+    background: #b6cfc7;
+    color: #18241f;
+    font-weight: 700;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #c4dfd5;
+    outline-offset: 2px;
 }
